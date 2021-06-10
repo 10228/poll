@@ -8,10 +8,18 @@
 </head>
 <body>
     <h1>投票主題</h1>
+    <a href="/poll/create/">新增投票主題</a>
     <ul>
         {% for p in polls %}
-        <li>{{ p.date_created }} {{ p.subject }}</li>
+        <li>{{ p.date_created }}
+            <a href="/poll/{{ p.id }}/"> {{ p.subject }}</a>
+            </li>
         {% endfor %}
     </ul>
+    {% endfor %}
+
+    {% block pagetitle %}
+    投票主題列表
+    {% endblock %}
 </body>
 </html>
