@@ -44,3 +44,4 @@ class PollEdit(UpdateView):
 class PollDelete(DeleteView):
     model= Poll
     success_url= '/poll/'
+    
